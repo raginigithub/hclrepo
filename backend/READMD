@@ -1,0 +1,147 @@
+GET
+
+
+/health-topics
+{
+    "status": "success",
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "title": "test",
+            "description": "test"
+        },
+        {
+            "id": 2,
+            "title": "test 2",
+            "description": "test"
+        }
+    ],
+    "message": "feature list"
+}
+
+
+GET
+localhost:3000/user-type
+
+{
+    "status": "success",
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "Doctor"
+        },
+        {
+            "id": 2,
+            "name": "Patient"
+        }
+    ],
+    "message": "user type list"
+}
+
+
+
+
+GET
+doctorId=
+count=
+
+appointment-details
+localhost:3000/getappointmentdetails?doctorId=1&count=3
+
+{
+    "status": "success",
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "slot_time": "09:00 AM",
+            "appointment_date": "0000-00-00",
+            "reason": "cold",
+            "create_date": "2024-12-02T09:55:27.000Z",
+            "doctor_name": "Ragini",
+            "patient_name": "Bhavani"
+        },
+        {
+            "id": 2,
+            "slot_time": "09:00 AM",
+            "appointment_date": "0000-00-00",
+            "reason": "cold",
+            "create_date": "2024-12-02T09:55:49.000Z",
+            "doctor_name": "Ragini",
+            "patient_name": "Bhavani"
+        },
+        {
+            "id": 3,
+            "slot_time": "09:00 AM",
+            "appointment_date": "2023-12-31T18:30:00.000Z",
+            "reason": "cold",
+            "create_date": "2024-12-02T09:56:34.000Z",
+            "doctor_name": "Ragini",
+            "patient_name": "Bhavani"
+        }
+    ],
+    "message": "doctor list"
+}
+
+
+
+
+localhost:3000/history?doctorId=1&count=3
+
+{
+    "status": "success",
+    "code": 200,
+    "data": [
+        {
+            "id": 3,
+            "slot_time": "09:00 AM",
+            "appointment_date": "2023-12-31T18:30:00.000Z",
+            "reason": "cold",
+            "create_date": "2024-12-02T10:43:45.000Z",
+            "doctor_name": "Ragini",
+            "patient_name": "Bhavani"
+        }
+    ],
+    "message": "doctor list"
+}
+
+
+localhost:3000/doctors
+
+{
+    "status": "success",
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "Ragini",
+            "title": "Dr"
+        },
+        {
+            "id": 2,
+            "name": "ithisha",
+            "title": "Dr"
+        }
+    ],
+    "message": "doctor list"
+}
+
+
+localhost:3000/login
+{"email":"ithisha@gmail.com","password":"1234"}    
+
+[
+    {
+        "id": 2,
+        "title": "Dr",
+        "name": "ithisha",
+        "email": "ithisha@gmail.com",
+        "user_type": 1
+    }
+]
+
+localhost:3000/createappointment
+{"doctorId":1,"patientId":3,"appointmentDate":"2024-01-01","slotTime":"09:00 AM","reason":"cold"}
+
